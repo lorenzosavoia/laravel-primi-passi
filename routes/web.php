@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $tests = [
+        'swag' => 'bella per tutti',
+        'ciao' => [
+            'saluto' => 'hello World',
+            'nome' => 'lorenzo',
+            'cognome' => 'savoia',
+        ],
+    ];
+    return view('helloWord', $tests);
 });
